@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pump Diagnostic System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+
+        .alert {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .alert-info {
+            background-color: #d1ecf1;
+            border-color: #bee5eb;
+            color: #0c5460;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pump Diagnostic System</h1>
+        <form method="post" action="{{ url_for('predict') }}">
+            <div class="form-group">
+                <label for="query">Enter Pump Diagnostic Information:</label>
+                <textarea class="form-control" id="query" name="query" rows="6" required></textarea>
+                <small class="form-text text-muted">Please provide the necessary diagnostic information in JSON format.</small>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+        {% if output1 %}
+        <div class="alert alert-info">
+            <p>{{ output1 }}</p>
+            <p>{{ output2 }}</p>
+        </div>
+        {% endif %}
+        {% if error_msg %}
+        <div class="alert alert-danger">
+            <p>{{ error_msg }}</p>
+        </div>
+        {% endif %}
+        <div class="alert alert-warning">
+            <p><strong>Limitations:</strong></p>
+            <ul>
+                <li>The prediction tool is based on historical data and may not be accurate for all pump conditions.</li>
+                <li>Results should be interpreted as a general assessment and not as a definitive diagnosis.</li>
+                <li>For more accurate and specific information about your pump, please consult an expert or refer to pump manufacturer documentation.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
