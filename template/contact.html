@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pump Diagnostic System - Contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("https://www.hydroinnovations.com.au/wp-content/uploads/what-is-a-centrifugal-pump-image_v1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-info img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .contact-info h2 {
+            margin-top: 20px;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+
+        .nav-link {
+            color: #007bff;
+        }
+
+        .nav-link:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pump Diagnostic System - Contact</h1>
+        <nav class="navbar navbar-expand">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('loadPage') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="contact-info">
+            <img src="static/faizal.jpg" alt="Your Picture">
+            <h2>Mohamad Faizal bin Rashidi</h2>
+            <ul>
+                <li>Email: ejai215@gmail.com</li>
+                <li>Phone: +6019-5801637</li>
+                <li>Address: Universiti Sains Malaysia, Kampus Kejuruteraan , 14300 , Nibong Tebal, Pulau Pinang</li>
+            </ul>
+        </div>
+        <p>Please feel free to contact me using the information provided above. I will be happy to assist you with any inquiries or concerns regarding the Pump Diagnostic System.</p>
+    </div>
+</body>
+</html>
