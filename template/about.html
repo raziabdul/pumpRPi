@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - Pump Diagnostic System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+            max-width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+
+        .alert {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Navigation styles */
+        .nav {
+            margin-bottom: 20px;
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 576px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/contact">Contact</a>
+        </nav>
+        <h1>About Pump Diagnostic System</h1>
+        
+        <img src="static/faizal1.jpg" alt="Faizal" width="300" height="300" style="display: block; margin: 0 auto;">
+        <p>Welcome to Pump Diagnostics, a cutting-edge web server designed for real-time machine learning monitoring of centrifugal pumps. This project, titled 'Development of Real-Time Machine Learning Monitoring Web Server for Pump Diagnostics,' is the culmination of my final year project.
+            
+            Project Background:
+            This project focuses on developing a defect prediction system using ML algorithms and real-time monitoring of centrifugal pumps. Centrifugal pumps are widely used in various industrial applications, and failures in these pumps can lead to energy loss, performance decline, or even complete system failure, resulting in significant economic losses. Early diagnosis of pump system conditions is crucial to prevent such failures. By leveraging machine learning models and data acquired from vibration and acoustic sensors, the project aims to accurately detect and diagnose pump defects, reducing downtime and enabling proactive maintenance.
+            
+            Problem Statement:
+            In today's data-driven and IoT-enabled world, traditional manual monitoring for pump diagnostics is becoming outdated. There is a need for an online, real-time machine learning monitoring system that enables engineers to quickly identify and diagnose pump problems. However, reports on the implementation of such systems in pump diagnostics applications are scarce.
+            
+            Objectives:
+            The main objectives of this project are as follows:
+            
+            Deploy a machine learning model that utilizes vibration and acoustic signals in the time-frequency domain to identify flow blockages in centrifugal pumps.
+            Develop a web server with a user interface that can be accessed from any device with an internet connection. The web server will connect to the machine learning model to provide real-time diagnostic status updates for the pump.
+            Implement a system using a Raspberry Pi connected to a sensor, specifically the MPU6050. This system will facilitate the transmission of telemetry data from a Python code running on the Raspberry Pi to an Azure IoT Central application.
+            Scope of Project:
+            The project utilizes an experimental rig in the Vibration Lab laboratory to collect data on flow blockage in a centrifugal pump. The collected data, including vibration, acoustic, and rotational speed measurements, will undergo pre-processing and feature extraction. The data will be used to train a machine learning model based on Support Vector Machine (SVM) in MATLAB and Microsoft Azure Machine Learning. A user interface will be developed using Visual Code Studio to enable interaction with the machine learning model and provide predictions on the health condition of the centrifugal pump. Additionally, a sensor called MPU6050 connected to a Raspberry Pi will be utilized to transmit telemetry data to an Azure IoT Central application.
+            By combining advanced machine learning techniques, real-time monitoring, and web server technology, this project aims to revolutionize pump diagnostics and maintenance practices, enabling engineers to proactively identify and address pump issues, minimize downtime, and optimize overall operational efficiency.
+            </p>
+        <p>For more information and to try real-time pump status , please visit and use data from: [https://raw.githubusercontent.com/Faizal215/FYP_Thesis/main/OutputNoStatus.json]</p>
+    </div>
+</body>
+</html>
